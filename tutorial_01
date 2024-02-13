@@ -1,0 +1,20 @@
+도커를 사용한 오라클DB 개발을 위한 세팅
+
+docker
+
+docker search oracle-xe-11g
+
+docker pull wnameless/oracle-xe-11g-r2
+
+docker run -d --name oracle-xe-11g -p 1521:1521 wnameless/oracle-xe-11g-r2
+
+
+
+
+
+## 나중에 다시 접속하기위해서는 먼저 사용 완료 후 꼭 종료
+
+docker stop oracle11g
+
+재접속
+docker run -d --name oracle-xe-11g -p 1521:1521 wnameless/oracle-xe-11g-r2
